@@ -1,0 +1,286 @@
+
+.ym-header {
+  z-index: 9999;
+  width: 100%;
+  height: 100px;
+/*  font-family: "ymfont-bold";*/
+  font-size: 0.875rem;
+  color: #fff;
+  position: fixed;
+  background-color: transparent;
+  box-sizing: border-box;
+}
+/*nav transform*/
+.ym-nav-transform {
+  background-color: #fff;
+  animation: navMove 1.5s ease-out;
+  div {
+    a {
+      color: #000;
+    }
+  }
+}
+@keyframes navMove {
+  0% {padding-top: 0;}
+  15% {padding-top: 60px;}
+  25% {padding-top: 40px;}
+  35% {padding-top: 20px;}
+  100% {padding-top: 0px;}
+}
+
+.ym-header-container {
+  z-index: 9998;
+  height: inherit;
+  position: relative;
+  padding: 0 50px;
+  .clearfix();
+}
+.ym-header-menu {
+  display: none;
+}
+.ym-header-nav {
+  .fl();
+}
+
+.ym-navItem,
+.ym-navLogo,
+.ym-header-infoItem,
+.ym-header-wechat,
+.ym-header-login{
+  height: 100px;
+  line-height: 100px;
+  .fl();
+  margin-right: 3.125rem;
+  &:last-of-type {
+    margin-right: 0;
+  }
+  a {
+    color: #fff;
+    font-size: 0.875rem;
+    &:hover {
+      color: @ymYellow;
+    }
+  }
+}
+.ym-header-login,
+.ym-header-wechat,
+.ym-navLogo,
+.ym-header-infoItem{
+  i {
+    font-size: 1.75rem;
+  }
+  span {
+    font-size: 0;
+  }
+}
+.ym-header-info {
+  .fr();
+}
+
+// 登录后个人信息展示
+.ym-nav-userInfo {
+  .fr();
+  width: 240px;
+  color: #555;
+  overflow: hidden;
+  a {
+    font-size: 0.875rem;
+    color: #555;
+    &:hover {
+      color: @ymYellow;
+    }
+  }
+}
+.ym-nav-userAvatar {
+  height: 100px;
+}
+.ym-userAvatar-link {
+  float: left;
+  margin-right: 12px;
+  img {
+    width: 64px;
+    height: 64px;
+    margin-top: 18px;
+    border-radius: 100%;
+    max-width: 100%;
+  }
+}
+.ym-userAvatar-name {
+  float: left;
+  font-size: 0.875rem;
+  height: 100px;
+  line-height: 100px;
+}
+.ym-user-menu {
+  width: 144px;
+  padding-bottom: 18px;
+  border-bottom-right-radius:10px;
+  border-bottom-left-radius:10px;
+  background-color: #fff;
+  margin-top: -1px;
+  li {
+    padding: 18px 0 0 24px;
+  }
+}
+
+.ym-header-extra-wechat {
+  display: none;
+  position: absolute;
+  top: 100px;
+  right: 0;
+  height: 10vw;
+  width:  10vw;
+  background-image: url(@ym-img-tkcode);
+  background-repeat: no-repeat;
+  background-size: 10vw 10vw;
+}
+
+@media screen and (max-width: @ym-large) {
+
+}
+@media screen and (max-width: @ym-normal) {
+  .ym-navItem-about {
+    display: none;
+  }
+  .ym-header-infoItem  {
+    margin-right: 2.125vw;
+  }
+}
+@media screen and (max-width: @ym-medium) {
+  .ym-navItem-review {
+    display: none;
+  }
+  .ym-navItem-route {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: @ym-small) {
+  .ym-header {
+    height: auto;
+    display: block !important;
+    &:after {
+      .mask(100%,100%,#8b8b8b,0.9);
+    }
+  }
+  .ym-header-container {
+    padding: 0 2vw;
+    background-color: #021520;
+  }
+  .ym-nav-transform {
+    background-color: #000;
+    animation: navMove 1.5s ease-out;
+    div {
+      a {
+        color: #fff;
+      }
+    }
+  }
+
+  .ym-header-nav,
+  .ym-navLogo,
+  .ymNav-userInfo{
+    display: none/*block*/;
+    float: none;
+  }
+  .ym-header-info {
+    .fr();
+  }
+  .ym-navItem,
+  .ym-header-infoItem{
+    float: none;
+  }
+  .ym-navItem-about,
+  .ym-navItem-review{
+    display: block;
+  }
+
+
+  .ym-navItem,
+  .ym-header-infoItem{
+    height: 13.3333vw;
+    line-height: 13.3333vw;
+    border-bottom: 1px solid #1f272b;
+    margin-right: 0;
+    box-sizing: border-box;
+    i:not(.ym-header-searchIcon) {
+      font-size: 2rem;
+      color: #fff;
+    }
+  }
+  .ym-navLogo {
+    margin-right: 0;
+    font-size: 1.75rem;
+    display: inline-block;
+    height: 13.3333vw;
+    line-height: 13.3333vw;
+    a {
+      color: #fff;
+      position: absolute;
+      left: 50%;
+      margin-left: -60px;
+    }
+  }
+  .ym-iconfont-static,
+  .ym-iconfont-active{
+    .ym-navLogo;
+  }
+  .ym-header-menu {
+    display: block;
+    .fl();
+/*    height: 13.3333vw;
+    line-height: 13.3333vw;*/
+    cursor: pointer;
+    height: 50px;
+    line-height: 50px;
+    .iconfont{
+      font-size: 0.875rem;
+    }
+    .ym-iconfont-active {
+      display: none;
+    }
+  }
+  .ym-header-login {
+    .ym-header-infoItem;
+    border-bottom: 0;
+  }
+
+  .ym-header-wechat,
+  .ym-header-mask {
+    display: none;
+  }
+
+  // 登录后个人信息展示
+  .ym-nav-userInfo {
+    width: auto;
+  }
+  .ym-nav-userAvatar {
+    height: 13.3333vw;
+  }
+  .ym-userAvatar-link {
+    margin-right: 0;
+    img {
+      width: 30px;
+      height: 30px;
+      margin-top: 3vw;
+    }
+  }
+  .ym-userAvatar-name{
+    display: none!important;
+  }
+  .ym-user-menu {
+    width: 100%;
+    background-color: #021520;
+    padding-bottom: 0;
+    li {
+      height: 13.3333vw;
+      line-height: 13.3333vw;
+      padding: 0 0 0 2vw;
+      border-bottom: 1px solid #1f272b;
+      box-sizing: border-box;
+    }
+  }
+  .ym-nav-userInfo a {
+    float: right;
+  }
+}
+

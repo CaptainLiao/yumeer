@@ -1,0 +1,182 @@
+#ym-camp {
+  width: 100%;
+  height: 41.6vw;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(@ym-img-index-camp);
+  background-color: #021520;
+}
+.ym-camp-success {
+
+}
+.ym-camp-container {
+  z-index: 9998;
+  width: 100%;
+  position: absolute;
+  top: 12.2916vw;
+  left: 50%;
+  margin-left: -50%;
+  text-align: center;
+  color: #fff;
+  .ym-camp-title{
+    font-size: 2.25rem;
+  }
+  .iconfont {
+    display: block;
+    margin: 20px 0 24px 0;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+}
+.ym-camp-form {
+  margin-top: 3.9583vw;
+  font-size: 0.875rem;
+}
+.ym-camp-name {
+  color: #fff;
+  width: 11.4583vw;
+  height: 2.5vw;
+  padding: 0 20px;
+  margin-right: 1.0417vw;
+  border: 2px solid #ddd;
+  border-radius: 100px;
+  background-color: transparent;
+  box-sizing: border-box;
+}
+
+.ym-camp-mobile {
+  .ym-camp-name;
+}
+.ym-camp-address {
+  .ym-camp-name;
+  option {
+    background-color: @ymYellow;
+  }
+}
+.ym-camp-submit {
+  width: 8.3333vw;
+  height: 2.5vw;
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 100px;
+  background-color: @ymYellow;
+  box-sizing: border-box;
+}
+
+.ym-camp-mask {
+  .ym-choose-mask;
+  background-color: #202b32;
+}
+
+@media screen and (max-width: @ym-large){
+  .ym-camp-container {
+    top: 8vw;
+    .ym-camp-title{
+      font-size: 2rem;
+    }
+    .iconfont {
+      display: block;
+      margin: 14px 0 18px 0;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+  .ym-camp-form {
+    margin-top: 3.9583vw;
+    font-size: 0.875rem;
+  }
+  .ym-camp-name {
+    color: #fff;
+    width: 28vw;
+    height: 4vw;
+    margin-right: 5vw;
+    margin-bottom: 4vw;
+  }
+
+  .ym-camp-mobile {
+    .ym-camp-name;
+  }
+  .ym-camp-address {
+    .ym-camp-name;
+    option {
+      background-color: @ymYellow;
+    }
+  }
+  .ym-camp-submit {
+    width: 28vw;
+    height: 4vw;
+    margin-right: 5vw;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 100px;
+    background-color: @ymYellow;
+    box-sizing: border-box;
+  }
+
+}
+@media screen and (max-width: @ym-normal){
+  .ym-camp-container {
+    top: 8vw;
+    .ym-camp-title{
+      font-size: 1.125rem;
+    }
+    .iconfont {
+      display: block;
+      margin: 10px 0 12px 0;
+    }
+    p {
+      font-size: 0.725rem;
+    }
+  }
+
+}
+@media screen and (max-width: @ym-medium){
+
+}
+@media screen and (max-width: @ym-small){
+  #ym-camp {
+    height: 69.3333vw;
+    background-image: url(@ym-img-index-camp-h5);
+  }
+  .ym-camp-container {
+    top: 8vw;
+    .ym-camp-title{
+      font-size: 1.125rem;
+    }
+    .iconfont {
+      display: block;
+      margin: 2.6vw 0 3.2vw 0;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+  .ym-camp-form {
+    margin-top: 11.7333vw;
+    font-size: 0.875rem;
+  }
+  .ym-camp-name {
+    width: 34.6667vw;
+    height: 8.5333vw;
+    padding: 0 2.6667vw;
+    margin-right: 2.6667vw;
+    margin-bottom: 4vw;
+  }
+
+  .ym-camp-mobile {
+    .ym-camp-name;
+  }
+  .ym-camp-address {
+    .ym-camp-name;
+  }
+  .ym-camp-submit {
+    .ym-camp-name;
+    font-size: 0.875rem;
+    color: #333333;
+    border: 2px solid @ymYellow;
+    background-color: @ymYellow;
+  }
+}

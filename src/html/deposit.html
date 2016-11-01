@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=8; IE=9">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <!-- inject:commoncss:css -->
+    <!-- endinject -->
+    <title>定金支付</title>
+</head>
+<body>
+
+@@include('lib/header.html')
+<!--支付定金主体-->
+<div class="ym-deposit">
+    <div class="ym-depositHead">
+        <h3 class="ym-depositHead-title">订单提交成功，请支付定金</h3>
+        <p>为确保订单有效，请在48小时内完成定金支付，您本次的待支付金额为：<span class="ym-depositHead-price">6000.00</span>元</p>
+    </div>
+    <!--支付方式-->
+    <form class="ym-payMethod">
+        <h3 class="ym-payMethod-title">
+            请选择支付方式
+            <span><a class="ym-how-to-pay" href="">不知道如何支付？</a></span>
+        </h3>
+
+        <ul class="ym-payMethod-list">
+            <li class="ym-payMethod-item ym-payMethod-wx">
+                <input type="radio" class="ym-payMethod-wxInput" name="payment" value="wx" />
+                <p class="pay-wx">微信支付</p>
+                <span class="ym-more-safe">更快更安全</span>
+                <!--微信支付跳转-->
+                <ul class="ym-payMethod-wxList ym-payment" style="display:none">
+                    <li class="ym-payMethod-wxcode">
+                        <div class="ym-wxcode-pic">
+                            <img src="/dist/img/ordersys/wxcode.jpg" alt="芋米微信二维码" id="ym-wxpay">
+                        </div>
+                        <div class="wxcode-txt">
+                            <p>请使用微信扫一扫</p>
+                            <p>扫描二维码支付</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="/dist/img/ordersys/wx-printscreen.jpg" alt="微信使用截图" class="wx-printscreen">
+                    </li>
+                </ul>
+            </li>
+            <li class="ym-payMethod-item ym-payMethod-alipay">
+                <input type="radio" name="payment" class="ym-payMethod-aliInput" />
+                <p class="pay-alipay">支付宝</p>
+            </li>
+            <li class="ym-payMethod-item ym-payMethod-bank">
+                <input type="radio" name="payment" />
+                <p class="pay-bank">网银支付</p>
+            </li>
+            <li class="ym-payMethod-item ym-payMethod-transfers">
+                <input type="radio" name="payment" value="" />
+                <p class="pay-transfers">转账汇款</p>
+                <span class="ym-more-safe">支持网上银行转账、银行柜台汇款</span>
+                <!--银行柜台转账说明-->
+                <ul class="transfers-txt ym-payment" style="display: none">
+                    <li>
+                        <h4 class="transfers-title">支付宝转账</h4>
+                        <p>芋米账号：<span class="transfers-email">money@yumeer.com</span></p>
+                        <p>转账金额：<span class="transfers-money">35000</span>元</p>
+                    </li>
+                    <li>
+                        <h4 class="transfers-title">网上银行转账/银行柜台转账</h4>
+                        <p>账户信息: 深圳市英杰恩教育科技有限公司</p>
+                        <p>开户银行: 招商银行高新园支行</p>
+                        <p>银行帐号: <span class="transfers-bankcard">7559 2834 9010 201</span></p>
+                        <p>转账金额：<span class="transfers-money">35000</span>元</p>
+                    </li>
+                    <li>
+                        <h4 class="transfers-title">注意事项</h4>
+                        <ul class="transfers-caution-list">
+                            <li>
+                                汇款转账时，请务必在备注栏中注明您的订单编号：<span class="order-number">000162</span>，以便我们核对订单信息。
+                            </li>
+                            <li>
+                                汇款后请保留汇款凭证，并通过微信公众号留言或发送截图，客服审核后，订单完成。
+                            </li>
+                            <li>为了确保您的订单有效，请在3个工作日内完成转账汇款。
+                            </li>
+                            <li>若您在支付过程中如有疑问，可及时拨打我们的客服电话：<span class="consumer-hotLine">0755-82552588</span>，我们会协助您解决问题。</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div class="ym-payMethod-btn">
+            <p>支付定金：<span>￥6000.00</span>元</p>
+            <button class="ym-payMethod-submit" type="button" value="确定" >确定</button>
+        </div>
+    </form>
+
+    <!--订单信息-->
+    <div class="ym-orderInfo">
+        <h3 class="ym-orderInfo-title">订单信息</h3>
+        <ul class="ym-orderInfo-list">
+            <li>订单编号：<span class="ym-orderInfo-number">201605311405000163</span></li>
+            <li>线路名称：<span class="ym-orderInfo-route">韩国美妈宝娃亲子游</span></li>
+            <li>出行时间：<span class="ym-orderInfo-time">2016.0810-2016.08.30</span></li>
+            <li>出行天数：<span class="ym-orderInfo-day">20天</span></li>
+            <li>大人：<span>1位</span></li>
+            <li>小孩：<span>1位</span></li>
+        </ul>
+    </div>
+</div>
+@@include('lib/footer.html')
+
+<!-- inject:commoncjs:js -->
+<!-- endinject -->
+
+<!-- inject:yunbajs:js -->
+<!-- endinject -->
+
+<!-- inject:mainjs:js -->
+<!-- endinject -->
+
+<script>
+    var orderDeposit = new YMOrderDeposit();
+    orderDeposit.render();
+</script>
+</body>
+</html>

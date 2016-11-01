@@ -1,0 +1,70 @@
+.ym-order-tk {
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 24px;
+}
+.ym-order-tkContainer {
+  position: relative;
+  width: 59.375vw;
+  color: #333;
+  margin: 0 auto;
+  padding: 1.5625vw 0 3.75vw;
+  box-sizing: border-box;
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 2.1875vw;
+  }
+}
+.ym-order-tk-wxCode {
+  height: 11.25vw;
+  padding-left: 23.125vw;
+  background-image: url(@ym-img-tkcode);
+  background-position: 10vw center;
+  background-size: 11.25vw 11.25vw;
+  background-repeat: no-repeat;
+  display: table-cell;
+  vertical-align: middle;
+  p {
+    width: 444px;
+    font-size: 0.875rem;
+    margin-top: 1.5625vw;
+  }
+}
+
+@media screen and (max-width: @ym-small) {
+
+  .ym-order-tkContainer {
+    width: 100%;
+    padding: 4vw 4vw 12vw;
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 8vw;
+    }
+  }
+  .ym-order-tk-wxCode {
+    height: auto;
+    padding-left: 0;
+    padding-top: 43vw;
+    background-position: top center;
+    background-size: 30vw 30vw;
+    h4 {
+      font-size: 0;
+      position: absolute;
+      top: 50vw;
+      left: 50%;
+      margin-left: -50px;
+      &:after {
+        content: '长按二维码';
+        font-size: 1.25rem;
+        color: #333;
+        font-weight: 400;
+      }
+    }
+    p {
+      width: 100%;
+      font-size: 1rem;
+      margin-top: 0;
+      color: #999;
+    }
+  }
+}

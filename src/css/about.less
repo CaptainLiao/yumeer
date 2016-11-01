@@ -1,0 +1,31 @@
+@import "less/mixin";
+@import "less/reset";
+@import "less/variable";
+
+
+@import "less/about-asideNav";
+@import "less/about-ym";
+@import "less/about-joinus";
+@import "less/about-contact";
+@import "less/about-qualification";
+
+.ym-about {
+  position: relative;
+  width: 1140px;
+  margin: 0 auto 30px ;
+  padding-top: 100px;
+  padding-left: 240px;
+  padding-right: 30px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+
+@media screen and (max-width: @ym-small) {
+  .ym-about {
+    width: 100%;
+    padding-top: 13.3333vw;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

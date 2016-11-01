@@ -1,0 +1,67 @@
+.ym-deposit-ad {
+  position: relative;
+  width: 100%;
+  padding-top: 100px;
+  margin-bottom: 24px;
+  background-color: #fff;
+}
+.ym-deposit-adContainer {
+  position: relative;
+  width: 1140px;//59.375vw;
+  margin: 0 auto;
+  padding: 1.5625vw 0 1.5625vw 3.125vw;
+  color: #333;
+  box-sizing: border-box;
+  .clearfix();
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 2.1875vw;
+  }
+  &:before {
+    .addIcon('\e64d',1.8rem);
+    color: #1cd8c9;
+    position: absolute;
+    left: 0;
+  }
+  em {
+    font-style: normal;
+    font-size: 0.875rem;
+    color: #999;
+  }
+  p {
+    font-size: 1.75rem;
+    color: @ymYellow;
+    line-height: 1.75rem;
+    margin-top: 2.5vw;
+    margin-bottom: 0.5vw;
+  }
+}
+
+@media screen and (max-width: @ym-large) {
+  .ym-deposit-adContainer {
+    position: relative;
+    width: 100%;
+    padding: 1.5625vw 6.25vw;
+    &:before {
+      left: 3.125vw;
+    }
+  }
+}
+
+@media screen and (max-width: @ym-small) {
+  .ym-deposit-ad {
+    padding-top: 0;//13.3333vw;
+  }
+  .ym-deposit-adContainer {
+    padding: 12vw 0 12vw 12vw;
+    h3 {
+      color: #1cd8c9;
+    }
+    em {
+      font-size: 1rem;
+      color: #333;
+      margin-top: 4vw;
+      display: inline-block;
+    }
+  }
+}

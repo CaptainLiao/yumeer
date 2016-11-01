@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=8; IE=9">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <!-- inject:commoncss:css -->
+    <!-- endinject -->
+    <title>线路详情</title>
+</head>
+<body>
+
+@@include('lib/header.html')
+@@include('lib/detail-nav.tpl')
+@@include('lib/detail-banner.tpl')
+@@include('lib/detail-design.tpl')
+@@include('lib/detail-parents.tpl')
+@@include('lib/detail-feature.tpl')
+@@include('lib/detail-trips.tpl')
+@@include('lib/detail-students.tpl')
+@@include('lib/detail-serve.tpl')
+@@include('lib/detail-remark.tpl')
+@@include('lib/detail-extra.tpl')
+
+@@include('lib/footer.html')
+
+<!-- inject:commoncjs:js -->
+<!-- endinject -->
+
+<!-- inject:mainjs:js -->
+<!-- endinject -->
+
+<script>
+    var config = new YMConfig();
+    var indexNav = new YMNav();
+    indexNav.render2();
+    var loadPage = new YMDetail();
+    loadPage.render();
+    var sku = new YMSku();
+    sku.render();
+    var detailNav = new YMDetailNav();
+    detailNav.render();
+    var detailStudents = new YMDetailStudents();
+    detailStudents.render();
+    var footer = new YMFooter();
+    footer.render();
+
+</script>
+</body>
+</html>

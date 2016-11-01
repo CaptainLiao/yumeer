@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=8; IE=9">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <!-- inject:commoncss:css -->
+    <!-- endinject -->
+    <title>404</title>
+    <style>
+        .ym-error-page {
+            font-size: 4rem;
+            padding-top: 200px;
+            padding-bottom: 100px;
+        }
+    </style>
+</head>
+<body>
+
+@@include('lib/header.html')
+
+<p class="ym-error-page">这个页面去外太空游学啦</p>
+
+@@include('lib/footer.html')
+
+<!-- inject:commoncjs:js -->
+<!-- endinject -->
+
+<!-- inject:mainjs:js -->
+<!-- endinject -->
+
+<script>
+    var config = new YMConfig();
+    var indexNav = new YMNav();
+    indexNav.render2();
+    var footer = new YMFooter();
+    footer.render();
+</script>
+</body>
+</html>

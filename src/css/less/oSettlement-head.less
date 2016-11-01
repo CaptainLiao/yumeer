@@ -1,0 +1,91 @@
+.ym-settle-head {
+  position: relative;
+  width: 100%;
+  padding-top: 100px;
+  margin-bottom: 24px;
+  background-color: #fff;
+}
+
+.ym-settle-headContainer {
+  position: relative;
+  width: 1140px;
+  margin: 0 auto;
+  padding: 1.5625vw 0 4.375vw 3.125vw;
+  color: #333;
+  box-sizing: border-box;
+  &:before {
+    .addIcon('\e64d',2.5rem);
+    color: #1cd8c9;
+    position: absolute;
+    left: 0;
+    top: 3.2vw;
+  }
+  h3 {
+    font-size: 1.5rem;
+    margin: 2.1875vw 0;
+  }
+
+  p {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin-bottom: 0.5vw;
+  }
+}
+
+
+
+.ym-settle-money {
+  font-size: 1.25rem;
+  color: @ymYellow;
+  font-weight: bold;
+}
+.ym-order-coupon
+,.ym-settle-finalPay,
+.ym-order-coupon-money{
+  color: #1cd8c9;
+  font-weight: bold;
+}
+
+@media screen and (max-width: @ym-large) {
+  .ym-settle-headContainer {
+    width: 100%;
+    padding: 1.5625vw 8.125vw;
+    &:before {
+      left: 3.125vw;
+    }
+  }
+}
+
+@media screen and (max-width: @ym-small) {
+  .ym-settle-head {
+    padding-top: 0;//13.3333vw;
+  }
+
+  .ym-settle-headContainer {
+    padding: 12vw 0 12vw 16vw;
+    &:before {
+      top: 12vw;
+      left: 4vw;
+    }
+    h3 {
+      margin: 0;
+      color: #1cd8c9;
+      line-height: 3rem;
+    }
+    p {
+      font-size: 1rem;
+      margin-top: 4vw;
+    }
+  }
+  .ym-settle-money {
+    font-size: 1.25rem;
+    color: @ymYellow;
+    font-weight: bold;
+  }
+  .ym-order-coupon
+  ,.ym-settle-finalPay,
+  .ym-order-coupon-money{
+    color: #1cd8c9;
+    font-weight: bold;
+  }
+}

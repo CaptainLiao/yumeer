@@ -1,0 +1,74 @@
+.ym-detail-extra {
+  width: 100%;
+  height: 8.75vw;
+  background-color: #fff;
+}
+.ym-detail-extra-list {
+  width: 59.375vw;
+  color: #333;
+  margin: 0 auto;
+  padding: 3.125vw 0;
+  box-sizing: border-box;
+  .clearfix();
+  li {
+    .fl();
+    width: 33.333%;
+    height: 2.5vw;
+    line-height: 2.5vw;
+    text-align: center;
+    box-sizing: border-box;
+    a {
+      font-size: 1rem;
+      color: #333;
+    }
+  }
+}
+
+.ym-detail-extra-cost:before {
+  .addIcon("\e634",2.5rem);
+  vertical-align: middle;
+  padding-right: 0.9vw;
+  color: #00c0ff;
+}
+.ym-detail-extra-visa:before {
+  .addIcon("\e61e",2.5rem);
+  vertical-align: middle;
+  padding-right: 0.9vw;
+  color: #ffba00;
+}
+.ym-detail-extra-prepare:before{
+  .addIcon("\e619",2.5rem);
+  vertical-align: middle;
+  padding-right: 0.9vw;
+  color: #1cd8c9;
+}
+
+@media screen and (max-width: @ym-small) {
+  .ym-detail-extra {
+    height: 15.2vw;
+  }
+  .ym-detail-extra-list {
+    width: 90%;
+    padding: 0;
+    li {
+      height: 15.2vw;
+      line-height: 15.2vw;
+      a {
+        font-size: 0.875rem;
+      }
+    }
+  }
+
+  .ym-detail-extra-cost:before {
+    .addIcon("\e634",1.5rem);
+
+  }
+  .ym-detail-extra-visa:before {
+    .addIcon("\e61e",1.5rem);
+
+  }
+  .ym-detail-extra-prepare:before{
+    .addIcon("\e619",1.5rem);
+
+  }
+}

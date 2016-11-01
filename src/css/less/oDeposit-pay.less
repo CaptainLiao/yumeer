@@ -1,0 +1,399 @@
+.ym-deposit-payMethod {
+  width: 100%;
+  margin-bottom: 24px;
+  background-color: #fff;
+}
+
+.ym-payMethod-container {
+  width: 1140px;//59.375vw;
+  color: #333;
+  margin: 0 auto;
+  padding: 1.5625vw 0;
+  box-sizing: border-box;
+  .clearfix();
+}
+
+//支付方式
+.ym-payMethod-title {
+  font-size: 1.5rem;
+  margin-bottom: 2.1875vw;
+}
+
+.ym-how-to-pay {
+  color: @ymYellow;
+  .fr();
+  font-size: 0.875rem;
+  font-weight: normal;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.ym-payMethod-item {
+  position: relative;
+  border-bottom: @border;
+  padding-left: 1.5625vw;
+  input {
+    position: relative;
+    width: 0;
+    &:before {
+      .addIcon('\e64a',2rem);
+      position: absolute;
+      left: 0;
+      top: -1vw;
+      cursor: pointer;
+    }
+  }
+}
+.ym-payMethod-active:before {
+  content: '\e64d'!important;
+  color: @ymYellow;
+}
+
+//微信支付
+.ym-payMethod-wxList {
+  text-align: center;
+  margin-bottom: 20px;
+  .clearfix();
+  li {
+    .fl();
+    width: 50%;
+    box-sizing: border-box;
+  }
+}
+.ym-payMethod-wxcode{
+  font-size: 1.4rem;
+  padding-bottom: 20px;
+  border-right: @border;
+  position: relative;
+}
+.ym-wxcode-pic {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  img {
+    max-width: 100%;
+  }
+}
+.wxcode-txt {
+  width: 200px;
+  position: relative;
+  left: 50%;
+  margin-left: -1.25vw;
+  &:before {
+    .addIcon('\e645',3rem);
+    position: absolute;
+    left: -4vw;
+    top: 0.2vw;
+  }
+  p {
+    text-align: left;
+    line-height: 1.875rem;
+    font-size: 0.875rem;
+  }
+}
+.ym-wxpay-printscreen {
+  width: 220px;
+  height: 220px;
+  padding-left: 23.125vw;
+  background-image: url(@ym-img-wxpay-printscreen);
+  background-position: 10vw center;
+  background-repeat: no-repeat;
+}
+
+
+
+.pay-wx,
+.pay-alipay,
+.pay-bank,
+.pay-transfers,
+.pay-other{
+  display: inline-block;
+  padding-left: 6.875vw;
+  margin-left: 3vw;
+  height: 4.6875vw;
+  line-height: 4.6875vw;
+  font-weight: bold;
+  position: relative;
+  &:before {
+    position: absolute;
+    left: 4.2vw;
+    top: 0;
+  }
+}
+.pay-other:before {
+  .addIcon('\e662',2rem);
+  color: #555;
+}
+.pay-wx:before {
+  .addIcon('\e646',2rem);
+  color: #00c800;
+
+}
+.pay-alipay:before {
+  .addIcon('\e648',2rem);
+  color: #00aaee;
+
+}
+.pay-bank:before {
+  .addIcon('\e649',2rem);
+  color: #3fbfd2;
+  margin-right: 0.625vw;
+}
+.pay-transfers:before {
+  .addIcon('\e652',2rem);
+  color: #00c800;
+}
+
+.ym-more-safe,
+.ym-payMethod-commend{
+  font-size: 0.875rem;
+  height: 4.6875vw;
+  line-height: 4.6875vw;
+  color: #999;
+  margin-left: 1.5625vw;
+
+}
+.ym-payMethod-commend {
+  color: @ymYellow;
+}
+//网银/柜台转账说明
+.transfers-txt {
+  padding-left: 9.875vw;
+}
+.transfers-txt > li {
+  margin-bottom: 30px;
+  padding-bottom: 1.5625vw;
+  &:first-of-type {
+    border-bottom: 1px dotted #ddd;
+    margin-top: 1.5625vw;
+  }
+  p {
+    font-size: 0.875rem;
+    line-height: 1.875rem;
+  }
+}
+.transfers-title {
+  color: #333;
+  margin-bottom: 0.9375vw;
+}
+.transfers-caution-list {
+  margin-top: 10px;
+  li {
+    font-size: 0.875rem;
+    list-style-type: disc;
+    margin-left: 20px;
+    padding-top: 12px;
+  }
+}
+.transfers-bankcard,
+.transfers-money,
+.order-number,
+.consumer-hotLine{
+  color: #ffa900;
+}
+.transfers-bankcard {
+  font-size: 1.25rem;
+}
+
+  //其他支付方式
+.ym-payMethod-other {
+  .ym-payMethod-item {
+    border-bottom: 0;
+    margin-bottom: 2.1875vw;
+  }
+}
+.ym-payMethod-other-list {
+  background-color: #fff;
+}
+
+  //确认支付按钮
+.ym-payMethod-btn {
+  /*float: right;*/
+  text-align: right;
+  p {
+    color: #555;
+    font-size: 0.875rem;
+    margin: 2.1875vw 0;
+  }
+}
+.ym-pay-bills-actually {
+  font-size: 2.25rem;
+  color:@ymYellow;
+}
+
+.ym-payMethod-price {
+  font-size: 2.25rem;
+  color: @ymYellow;
+}
+.ym-payMethod-submit {
+  .ym-button(11.875vw,2.5vw,11.875vw,@ymYellow);
+  font-size: 1.5rem;
+  margin-bottom: 2.1875vw;
+}
+
+@media screen and (max-width: @ym-large) {
+  .ym-payMethod-container {
+    position: relative;
+    width: 100%;
+    padding: 1.5625vw 3.125vw 1.5625vw 3.125vw;
+  }
+}
+
+@media screen and (max-width: @ym-small) {
+  .ym-payMethod-container {
+    width: 100%;
+    padding: 0;
+  }
+
+  //支付方式
+  .ym-payMethod-title {
+    font-size: 1.5rem;
+    margin-bottom: 8vw;
+    padding: 4vw 0 0 4vw;
+  }
+
+  .ym-payMethod-item {
+    padding: 0;
+    border-bottom: 1px solid #ddd;
+    &:last-of-type {
+      border: none;
+    }
+  }
+
+
+  //微信支付
+  .ym-payMethod-wxList {
+    text-align: center;
+    margin-bottom: 20px;
+    .clearfix();
+    li {
+      .fl();
+      width: 50%;
+      box-sizing: border-box;
+    }
+  }
+  .ym-payMethod-wxcode{
+    font-size: 1.4rem;
+    padding-bottom: 20px;
+    border-right: @border;
+    position: relative;
+  }
+  .ym-wxcode-pic {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    img {
+      max-width: 100%;
+    }
+  }
+  .wxcode-txt {
+    width: 200px;
+    position: relative;
+    left: 50%;
+    margin-left: -1.25vw;
+    &:before {
+      .addIcon('\e645',3rem);
+      position: absolute;
+      left: -4vw;
+      top: 0.2vw;
+    }
+    p {
+      text-align: left;
+      line-height: 1.875rem;
+      font-size: 0.875rem;
+    }
+  }
+  .pay-wx,
+  .pay-alipay,
+  .pay-bank,
+  .pay-transfers,
+  .pay-other{
+    display: block;
+    color: #555;
+    font-weight: 400;
+    height: 16vw;
+    line-height: 16vw;
+    padding-left: 16vw;
+    padding-right: 4vw;
+    margin-left: 0;
+    &:after {
+      .fr();
+      .addIcon('\e62e',1.25rem);
+      color: #999;
+      line-height: 16vw;
+    }
+  }
+
+
+  .ym-payMethod-commend{
+    position: absolute;
+    right: 12vw;
+    top: 5.4vw;
+  }
+  .ym-payMethod-commend {
+    color: @ymYellow;
+  }
+  //网银/柜台转账说明
+  .transfers-txt {
+    padding-left: 9.875vw;
+  }
+  .transfers-txt > li {
+    margin-bottom: 30px;
+    padding-bottom: 1.5625vw;
+    &:first-of-type {
+      border-bottom: 1px dotted #ddd;
+      margin-top: 0;
+      padding-bottom: 4vw;
+    }
+    p {
+      font-size: 0.875rem;
+      line-height: 1.875rem;
+    }
+  }
+  .transfers-title {
+    color: #333;
+    margin-bottom: 0.9375vw;
+  }
+  .transfers-caution-list {
+    margin-top: 10px;
+    li {
+      font-size: 0.875rem;
+      list-style-type: disc;
+      margin-left: 20px;
+      padding-top: 12px;
+    }
+  }
+  .transfers-bankcard,
+  .transfers-money,
+  .order-number,
+  .consumer-hotLine{
+    color: #ffa900;
+  }
+  .transfers-bankcard {
+    font-size: 1.25rem;
+  }
+
+  //其他支付方式
+  .ym-payMethod-other {
+    .ym-payMethod-item {
+      border-bottom: 0;
+      margin-bottom: 2.1875vw;
+    }
+  }
+
+  //确认支付按钮
+
+
+  .ym-payMethod-wxInput,
+  .ym-payMethod-aliInput,
+  .ym-more-safe,
+  .ym-how-to-pay,
+  .ym-payMethod-btn{
+    display: none;
+  }
+  .ym-payMethod-item {
+    input {
+      display: none;
+    }
+  }
+}

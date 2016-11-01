@@ -1,0 +1,213 @@
+.ym-deposit-orderInfo {
+  width: 100%;
+  margin-bottom: 24px;
+  background-color: #fff;
+}
+
+.ym-deposit-orderInfo-container {
+  width: 1140px;//59.375vw;
+  color: #333;
+  margin: 0 auto;
+  padding: 1.5625vw 0;
+  box-sizing: border-box;
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 2.1875vw;
+  }
+}
+
+.ym-orderInfo-list {
+  border-bottom: 1px dotted #ddd;
+  li {
+    color: #999;
+    margin-bottom: 1.25vw;
+    p {
+      display: inline;
+    }
+  }
+  span {
+    display: inline-block;
+    margin-left: 1.5625vw;
+    color: #333;
+  }
+}
+
+
+.ym-orderInfo-form {
+  width: 100%;
+}
+.ym-orderInfo-form-list {
+  position: relative;
+  width: inherit;
+  color: #333;
+  margin: 0 auto 3.125vw;
+  box-sizing: border-box;
+  .clearfix();
+}
+.ym-orderInfo-form-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.ym-orderInfo-details {
+  margin-left: 3.75vw;
+  color: @ymYellow;
+  font-size: 1rem;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+/*.ym-orderInfo-parentsNum,
+.ym-orderInfo-studentsNum {
+  color: @ymYellow;
+}*/
+.ym-orderInfo-nameNum {
+  display: inline-block;
+  color: #fff;
+  background-color: #f5bb22;
+  font-size: 1.5rem;
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  line-height: 48px;
+  border-radius: 100%;
+}
+.ym-orderInfo-form-item {
+  margin-top: 3.25vw;
+}
+
+#ym-orderInfo-form-parents {
+  .clearfix();
+}
+#ym-orderInfo-form-students {
+  .clearfix();
+}
+.ym-orderInfo-form-parents-item,
+.ym-orderInfo-form-students-item{
+  .fl();
+  margin-top: 30px;
+  width: 38vw;
+  &:nth-of-type(2){
+    margin-right: 0;
+  }
+  input {
+    border: 1px solid #333;
+  }
+  dl {
+    position: relative;
+  }
+  dt {
+    position: absolute;
+  }
+  dd {
+    margin-left: 66px;
+    font-size: 1rem;
+    margin-bottom: 1.25vw;
+    label {
+      display: inline-block;
+      width: 120px;
+      margin-right: 1.25vw;
+      text-align: right;
+    }
+  }
+}
+.ym-orderInfo-flag {
+  font-size: 0.875rem;
+  color: #fff;
+  width: 4.375vw;
+  height: 1.25vw;
+  border-radius: 4.375vw;
+}
+.ym-flag-green {
+  background-color: #1cd8c9;
+}
+.ym-flag-gray {
+  background-color: #999;
+}
+
+@media screen and (max-width: @ym-large) {
+  .ym-deposit-orderInfo-container {
+    position: relative;
+    width: 100%;
+    padding: 1.5625vw 3.125vw 1.5625vw 3.125vw;
+  }
+}
+
+@media screen and (max-width: @ym-small){
+  .ym-deposit-orderInfo-container {
+    width: 100%;
+    padding: 4vw;
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 8vw;
+    }
+  }
+
+  .ym-orderInfo-list {
+    margin-left: 30px;
+    border: 0;
+
+    li {
+      margin-bottom: 4vw;
+      p {
+        width: 26vw;
+        text-align: right;
+        display: inline-block;
+      }
+    }
+    span {
+      margin-left: 4vw;
+    }
+  }
+
+  .ym-orderInfo-form {
+    width: 100%;
+  }
+  .ym-orderInfo-form-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    &:after {
+      content: '';
+      .fr();
+      width: 83%;
+      border-bottom: 1px solid #ddd;
+      margin-top: 14px;
+    }
+  }
+  .ym-orderInfo-details {
+    position: absolute;
+    top: 4vw;
+    right: 4vw;
+    color: #999;
+  }
+
+  .ym-orderInfo-form-parents-item,
+  .ym-orderInfo-form-students-item{
+    float: none;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 8vw;
+    dt {
+      top: 8vw;
+      left: 0;
+    }
+    dd {
+      margin-left: 30px;
+      margin-bottom: 4vw;
+      label {
+        width: 26vw;
+        color: #999;
+        margin-right: 4vw;
+      }
+     /* input {
+        width: 14.6875vw;
+        height: 2.5vw;
+        padding: 0 1vw;
+        border: 1px solid #fff;
+        border-radius: 14.6875vw;
+        box-sizing: border-box;
+        background-color: #fff;
+      }*/
+    }
+  }
+}
+

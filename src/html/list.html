@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=8; IE=9">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <!-- inject:commoncss:css -->
+    <!-- endinject -->
+    <title>线路列表</title>
+</head>
+<body class="ym-list-bg">
+
+@@include('lib/header.html')
+
+@@include('lib/list-options.tpl')
+@@include('lib/list-tips.tpl')
+@@include('lib/list-head.tpl')
+@@include('lib/list-items.tpl')
+
+@@include('lib/footer.html')
+
+<!-- inject:commoncjs:js -->
+<!-- endinject -->
+
+<!-- inject:mainjs:js -->
+<!-- endinject -->
+
+<script>
+    var config = new YMConfig();
+    var indexNav = new YMNav();
+    indexNav.render2();
+    var list = new YMList();
+    list.render();
+    var footer = new YMFooter();
+    footer.render();
+</script>
+</body>
+</html>

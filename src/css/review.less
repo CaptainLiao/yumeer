@@ -1,0 +1,36 @@
+@import "less/mixin";
+@import "less/reset";
+@import "less/variable";
+
+.container {
+  width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 100px;
+}
+
+@media screen and (max-width: @ym-small){
+  .container {
+    width: 100%;
+    padding-top: 13.3333vw;
+  }
+  .timeline {
+    .timeline-heading {
+      width: 100%;
+      img {
+        max-width: 100%;
+      }
+    }
+    .timeline-body {
+      h2 {
+        padding: 12px 12px 24px;
+        a {
+          font-size: 1rem;
+          font-weight: normal;
+          color: #555;
+        }
+
+      }
+    }
+  }
+}

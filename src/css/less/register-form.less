@@ -1,0 +1,192 @@
+.ym-register {
+  position: relative;
+  height: 43.75vw;
+  width: 100%;   //1920px
+  background: transparent url(@ym-img-register) top left no-repeat;
+  background-size: cover;
+}
+.ym-register-form {
+  position: absolute;
+  top: 9.0625vw;
+  right: 18.73vw;
+  width: 20vw;
+  height: 31.25vw;
+  text-align: center;
+  color: #333;
+  background-color: #fff;
+  border-radius: 10px;
+  z-index: 999;
+  h3 {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1.5rem;
+  }
+}
+
+.ym-register-formList {
+  margin: 5.9375vw auto 1.875vw;
+  width: 80%;
+  li {
+    margin-top: 20px;
+    position: relative;
+    text-align: left;
+    input:not([type="checkbox"]) {
+      width: 100%;
+      height: 3vw;
+      background-color: transparent;
+      border: 1px solid #999;
+      border-radius: 2vw;
+      padding: 0 18px;
+      box-sizing: border-box;
+      outline: none;
+    }
+  }
+
+  li:last-child {
+    text-align: center;
+    margin-top: 3.125vw;
+  }
+}
+
+//手机验证码
+.ym-getPhoneCode {
+  position: absolute;
+  top: 0.9vw;
+  right: 16px;
+  color: @ymYellow;
+  cursor: pointer;
+  background-color: transparent;
+  &[disabled] {
+    cursor: not-allowed;
+  }
+}
+.ym-phoneCode-check {
+  &[disabled] {
+    cursor: not-allowed;
+    background-color: #ccc;
+  }
+}
+//注册按钮
+
+.ym-register-submitBtn {
+  height: 3vw;//54px;
+  width: 100%;
+  background-color: #ffa900;
+  color: #fff;
+  border-radius: 2vw;
+  &:hover {
+    background-color: #ffcb05;
+  }
+}
+.ym-register-agreement {
+  margin-top: 20px;
+  font-size: 0.75rem;
+  color: #999;
+  a {
+    font-size: 0.75rem;
+    color: #999;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+//验证的提示信息
+label.error {
+  color: red;
+  font-size: .75rem;
+ /* position: absolute;
+  top: -30px;
+  left: 0;*/
+}
+
+.ym-errorMsg {
+  position: absolute;
+  font-style: normal;
+  color: #7b007b;
+  float: left;
+}
+#ym-phoneCode-error {
+
+}
+
+
+@media screen and (max-width: @ym-small) {
+  .ym-register {
+    height: 177vw; //1143
+    width: 100%; //
+    background: transparent url(@ym-img-detail-ice) top left no-repeat;
+    background-size: cover;
+    &:before {
+      .mask(100%,100%,#000,0.6);
+    }
+  }
+
+  .ym-register-form {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    margin-top: 30vw;
+    background-color: transparent;
+    h3 {
+      display: none;
+    }
+  }
+  .ym-register-formList {
+    li {
+      font-size: 1.25rem;
+      input:not([type="checkbox"]) {
+        height: 54px;
+        color: #fff;
+        border: 1px solid #fff;
+        border-radius: 24vw;
+      }
+      input::-webkit-input-placeholder {
+        font-size: 1rem;
+        color: #fff;
+      }
+      input:-moz-placeholder {
+        font-size: 1rem;
+        color: #fff;
+      }
+      input::-moz-placeholder {
+        font-size: 1rem;
+        color: #fff;
+      }
+      input:-ms-input-placeholder {
+        font-size: 1rem;
+        color: #fff;
+      }
+    }
+    li:last-child {
+      margin-top: 8vw;
+    }
+  }
+
+  .ym-getPhoneCode {
+    top: 16px;
+    font-size: 1rem;
+  }
+
+
+  //注册按钮
+  .ym-register-submitBtn {
+    height: 54px;//54px;
+    width: 100%;
+    color: #333;
+    border-radius: 24vw;
+  }
+  .ym-register-agreement {
+    font-size: 0.875rem;
+    color: #fff;
+    a {
+      font-size: 0.875rem;
+      color: #fff;
+    }
+  }
+}
+

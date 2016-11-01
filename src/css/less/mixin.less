@@ -1,0 +1,178 @@
+/*垂直居中*/
+.ym-vertical-align(@type,@offset,@height: @ym-logo-height){
+  position: absolute;
+    @{type}: @offset;
+  top: 50%;
+  height: @height;
+  margin-top: @height/-2;
+}
+.p-absolute(){
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.ym-h5-head {
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0 4vw;
+  margin-bottom: 4vw;
+  background-color: #fff;
+  box-sizing: border-box;
+  .iconfont {
+    color: #333;
+    font-size: 1.75rem;
+    .fl();
+  }
+}
+
+.ym-button(@width,@height,@radian,@bg) {
+  width: @width;
+  height: @height;
+  border-radius: @radian;
+  background-color: @bg;
+}
+
+.ym-absolute-center() {
+  position: absolute;
+  bottom:0;
+  left: 50%;
+  width: 100%;
+  margin-left: -50%;
+  text-align: center;
+}
+
+.ym-mask (@width:100%,@height:100%,@opacity:0.3) {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: '';
+  width: @width;
+  height: @height;
+  background: linear-gradient(transparent 0px, rgba(0, 0, 0, @opacity) 100%);
+}
+
+.opacity (@opacity) {
+  @opacityPercentage: @opacity * 100;
+  opacity: @opacity;
+  -ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(opacity=@{opacityPercentage})";
+  filter: ~"progid:DXImageTransform.Microsoft.Alpha(opacity=@{opacityPercentage})";
+}
+
+.headerIcon(@font-size:1rem,@mt:1.041vw,@mb:1.25vw){
+  content: @headerIcon;
+  display: block;
+  font-size: @font-size;
+  font-family: "iconfont";
+  font-weight: normal;
+  margin: @mt 0 @mb;
+}
+.addIcon(@content,@font-size) {
+  content: @content;
+  font-size: @font-size;
+  font-family: "iconfont";
+  font-weight: normal;
+}
+
+
+.indexHeader(@height:300px,@font-size-h2:2.25rem,@font-size-p:1.5rem,@font-size-icon:1.5rem) {
+  width: 100%;
+  height: @height;
+  text-align: center;
+  color: #333;
+  padding: 86px 0;
+  box-sizing: border-box;
+  h2 {
+    font-size: @font-size-h2;
+    &:after {
+      .headerIcon(@font-size-icon);
+    }
+  }
+  p {
+    font-size: @font-size-p;
+  }
+}
+
+.mask(@width:100%,@hieght:100px,@bg:#8b8b8b,@opacity:0.8) {
+  content: '';
+  position: absolute;
+  top:0;
+  left: 0;
+  width: @width;
+  height: @hieght;
+  background-color: @bg;
+  .opacity(@opacity)
+}
+
+
+/*布局居中显示*/
+.ym-layoutCenter() {
+  width: 100%;
+  max-width: @max-width;
+  margin:0 auto;
+}
+
+.clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.fl() {
+  float: left;
+}
+.fr(){
+  float: right;
+}
+.order-title(@fontSize:2rem,@color:@ym-nav-txtcolor,@height:4rem,@paddingLeft:40px) {
+  font-size: 2rem;
+  color: @ym-nav-txtcolor;
+  height: @height;
+  line-height: @height;
+  padding-left: 40px;
+  margin-bottom: 10px;
+  background-color: transparent;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+.set-background-img (@height:4rem,@paddingLeft:40px,@x:left,@y:right) {
+  height: @height;
+  line-height: @height;
+  padding-left: @paddingLeft;
+  background-color: transparent;
+  background-position: @x @y;
+  background-repeat: no-repeat;
+}
+
+
+//订单系统主题内容结构
+.ym-order() {
+  font-family: @font-family;
+  padding: 0 20px;
+  font-size: 1.6rem;
+  .ym-layoutCenter();
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

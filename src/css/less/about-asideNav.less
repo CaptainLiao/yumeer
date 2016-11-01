@@ -1,0 +1,101 @@
+.ym-about-nav {
+  position: absolute;
+  left: 0;
+  top: 100px;
+  width: 240px;
+}
+
+.ym-an-content {
+  dt {
+    padding-left: 30px;
+  }
+  dd {
+    padding-left: 50px;
+  }
+
+}
+dd{
+  a {
+    font-size: 1rem;
+    color: #333;
+    padding-top: 30px;
+    display: inline-block;
+
+    &:hover {
+      color: @ymYellow;
+    }
+  }
+}
+
+
+.ym-an-active {
+  color: @ymYellow;
+}
+.ym-an-aboutUs,
+.ym-an-helpCenter{
+  font-size: 1.25rem;
+  color: #ddd;
+  padding: 30px 0;
+  border-bottom: 1px solid #ddd;
+}
+.ym-an-aboutUs:before {
+  .addIcon("\e661",1.5rem);
+}
+.ym-an-helpCenter{
+  padding-top: 60px;
+  &:before {
+    .addIcon("\e65e",1.5rem);
+  }
+}
+
+@media screen and (max-width: @ym-small){
+  .ym-about-nav {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  .ym-an-content {
+    .clearfix;
+    dt {
+      padding-left: 30px;
+    }
+    dd {
+      padding-left: 6vw;
+      .fl();
+    }
+    a {
+      font-size: 1rem;
+      color: #333;
+      padding-top: 30px;
+      display: inline-block;
+
+      &:hover {
+        color: @ymYellow;
+      }
+    }
+  }
+
+
+
+  .ym-an-active {
+    color: @ymYellow;
+  }
+  .ym-an-aboutUs,
+  .ym-an-helpCenter{
+    font-size: 1.25rem;
+    color: #ddd;
+    padding: 30px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  .ym-an-aboutUs:before {
+    .addIcon("\e661",1.5rem);
+  }
+  .ym-an-helpCenter{
+    padding-top: 60px;
+    &:before {
+      .addIcon("\e65e",1.5rem);
+    }
+  }
+}

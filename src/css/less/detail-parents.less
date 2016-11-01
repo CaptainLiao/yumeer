@@ -1,0 +1,95 @@
+.ym-detail-parents {
+  width: 100%;
+  min-height: 27.5vw;
+  background-color: #fff;
+  position: relative;
+}
+
+.ym-detail-parentsContainer {
+  width: 59.375vw;
+  color: #333;
+  margin: 0 auto;
+  padding: 3.125vw 0;
+  box-sizing: border-box;
+}
+
+.ym-detail-parents-title {
+  font-size: 2.25rem;
+}
+.ym-detail-englishTitle {
+  font-size: 0.75rem;
+  color: #999;
+  width: 20px;
+  padding-bottom: 10px;
+  white-space: nowrap;
+  border-bottom: 2px solid #ddd;
+}
+.ym-detail-parents-slogan {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  color: #555;
+}
+.ym-detail-parents-explain {
+  margin-top: 2.1875vw;
+  margin-bottom: 2.1875vw;
+  margin-left: 23.75vw;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #333;
+}
+.ym-detail-parents-item {
+  margin-top: 1.875vw;
+  display: table;
+  height: 6.5625vw;
+  .clearfix();
+}
+.ym-detail-parents-picture {
+  .fl();
+  width: 6.5625vw;
+  height: 6.5625vw;
+  margin-right: 1.25vw;
+  background-color: #0b97c4;
+  border-radius: 100%;
+  img {
+    max-width: 100%;
+    width: 6.5625vw;
+    height: 6.5625vw;
+    border-radius: 100%;
+  }
+}
+
+.ym-detail-parents-name {
+  display: table-cell;
+  vertical-align: middle;
+}
+.ym-detail-parents-job {
+  display: block;
+}
+
+
+@media screen and (max-width: @ym-small) {
+  .ym-detail-parentsContainer {
+    width: 100%;
+    padding: 8.8vw 4vw;
+  }
+
+  .ym-detail-parents-explain {
+    width: 70.4vw;
+    margin-top: 8.8vw;
+    margin-bottom: 8.8vw;
+    margin-left: 12.8vw;
+  }
+  .ym-detail-parents-item {
+    margin-top: 7.2vw;
+    height: 16.8vw;
+  }
+  .ym-detail-parents-picture {
+    width: 16.8vw;
+    height: 16.8vw;
+    margin-right: 3.2vw;
+    img {
+      width: 16.8vw;
+      height: 16.8vw;
+    }
+  }
+}

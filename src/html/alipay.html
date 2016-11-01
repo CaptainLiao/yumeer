@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=8; IE=9">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>支付宝</title>
+</head>
+<body>
+<!-- inject:commoncjs:js -->
+<!-- endinject -->
+
+<!-- inject:mainjs:js -->
+<!-- endinject -->
+<script>
+    $(function(){
+        var config = new YMConfig();
+        var params = config.getUrlParam();
+        var orderNum = params.orderNum;/*获取主订单号*/
+        var options = {};
+        console.log(orderNum);
+        var _userAgent = navigator.userAgent;
+        if(_userAgent.indexOf("iPad")>-1 || _userAgent.indexOf("iPhone")>-1 ||
+                _userAgent.indexOf("Android ")>-1){
+            options = {
+                "order": orderNum,
+                "platform": "Mobile"
+            };
+            function renderH5Html(json) {
+                $("body").append(json.data);
+            }
+            config.reqAPI("POST",config.api.alipayAPI,options,renderH5Html);
+        }else {
+            options = {
+                "order": orderNum,
+                "platform": "PC"
+            };
+            function renderHtml(json) {
+                $("body").append(json.data);
+            }
+            config.reqAPI("POST",config.api.alipayAPI,options,renderHtml);
+        }
+
+    });
+</script>
+
+</body>
+</html>

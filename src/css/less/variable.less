@@ -1,0 +1,110 @@
+@import "host";
+
+/*load webFont*/
+@import "fontface/fonts/vagrounded-light/vagrounded-light.css";
+@import "fontface/fonts/vagroundedbt-regular/vagroundedbt-regular.css";
+@import "fontface/fonts/ymfont-bold/ymfont-bold.css";
+/*load iconFont*/
+@import "fontface/iconfonts/iconfont.css";
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:16px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;}
+/*global var*/
+@font-size: 100%;  //16px
+@font-family: "vagroundedbt-regular";
+@max-width: 1200px;
+@bg-color: #fff;
+
+/*screen size*/
+@ym-large: 1380px;
+@ym-normal: 992px;
+@ym-medium: 768px;
+@ym-small: 650px;/*cellphone*/
+
+/*yumeer yellow*/
+@ymYellow: #f5bb22;
+
+/*index header icon*/
+
+@headerIcon: "\e63a";
+@rightIcon: "\e63e";
+
+
+
+/*top nav*/
+@ym-logo-height: 60px;
+@ym-login-bgcolor: #10557c;
+@ym-login-color: #fff;
+@ym-nav-txtcolor: @ym-login-bgcolor;
+
+/*global footer background color*/
+@ym-gf-bgcolor: #000;
+
+/*order system*/
+
+@border: 1px solid #b4b4b4;
+
+@buildhost: "http://mast.yumeer.com:20002";
+/*@buildhost: "http://localhost:10240/mast";*/
+
+@ym-img-detail-ice: "@{buildhost}/dist/img/ice_meitu_1.jpg";
+@ym-img-detail-before:"@{buildhost}/dist/img/Before.jpg";
+@ym-img-detail-tk: "@{buildhost}/dist/img/yumeer_meitu_3.jpg";
+@ym-img-detail-24h: "@{buildhost}/dist/img/24h.jpg";
+@ym-img-detail-parents: "@{buildhost}/dist/img/parents.jpg";
+@ym-img-detail-report: "@{buildhost}/dist/img/report_meitu_2.jpg";
+
+@ym-img-deposit-wxpay: "@{buildhost}/dist/img/order_pay_w.jpg";
+
+@ym-img-tkcode: "@{buildhost}/dist/img/ymcode_server.jpg";  // 微信服务好二维码
+@ym-img-wxpay-printscreen: "@{buildhost}/dist/img/order_pay_w.jpg";
+
+
+@ym-img-index-choose1: "http://mast.yumeer.com:20002/dist/img/choose1.jpg";
+@ym-img-index-choose-say1: "http://mast.yumeer.com:20002/dist/img/choose-say1.jpg";
+@ym-img-index-choose-say2: "http://mast.yumeer.com:20002/dist/img/choose-say2.jpg";
+@ym-img-index-choose-say3: "http://mast.yumeer.com:20002/dist/img/choose-say3.jpg";
+@ym-img-index-choose-say4: "http://mast.yumeer.com:20002/dist/img/choose-say4.jpg";
+@ym-img-index-choose-say5: "http://mast.yumeer.com:20002/dist/img/choose-say5.jpg";
+
+@ym-img-index-leader: "http://mast.yumeer.com:20002/dist/img/choose_leader.jpg";
+@ym-img-index-feed: "http://mast.yumeer.com:20002/dist/img/choose_feed.jpg";
+@ym-img-index-tk: "http://mast.yumeer.com:20002/dist/img/choose_tk.jpg";
+@ym-img-index-safety: "http://mast.yumeer.com:20002/dist/img/choose_safety.jpg";
+@ym-img-index-sayImg: "http://mast.yumeer.com:20002/dist/img/choose_sayImg.jpg";
+@ym-img-index-camp: "http://mast.yumeer.com:20002/dist/img/camp.jpg";
+
+@ym-img-index-banner: "http://mast.yumeer.com:20002/dist/img/banner.jpg";
+@ym-img-index-news1: "http://mast.yumeer.com:20002/dist/img/news-1.jpg";
+@ym-img-index-news2: "http://mast.yumeer.com:20002/dist/img/news-2.jpg";
+
+@ym-img-index-route1: "http://mast.yumeer.com:20002/dist/img/route1.jpg";
+@ym-img-index-travel: "http://mast.yumeer.com:20002/dist/img/travel.jpg";
+
+@ym-img-index-choose1-h5: "http://mast.yumeer.com:20002/dist/img/choose1_750.jpg";
+@ym-img-index-leader-h5: "http://mast.yumeer.com:20002/dist/img/choose_leader_750.jpg";
+@ym-img-index-feed-h5: "http://mast.yumeer.com:20002/dist/img/choose_feed_750.jpg";
+@ym-img-index-tk-h5: "http://mast.yumeer.com:20002/dist/img/choose_tk.jpg";
+@ym-img-index-safety-h5: "http://mast.yumeer.com:20002/dist/img/choose_safety_750.jpg";
+@ym-img-index-sayImg-h5: "http://mast.yumeer.com:20002/dist/img/choose_sayImg.jpg";
+@ym-img-index-camp-h5: "http://mast.yumeer.com:20002/dist/img/camp_750.jpg";
+
+@ym-img-detail-feature-bg: "http://mast.yumeer.com:20002/dist/img/more_routeBg_02.jpg";
+@ym-img-detail-students-bg: "http://mast.yumeer.com:20002/dist/img/more_sjslBg_02.jpg";
+@ym-img-detail-serve-bg1: "http://mast.yumeer.com:20002/dist/img/more_serve1.jpg";
+@ym-img-detail-extra-cost: "http://mast.yumeer.com:20002/dist/img/more_extra_cost.jpg";
+@ym-img-detail-more-feature-750: "http://mast.yumeer.com:20002/dist/img/more_feature_750.jpg";
+@ym-img-detail-design: "http://mast.yumeer.com:20002/dist/img/more_sjslBg_02.jpg";
+@ym-img-detail-students: "http://mast.yumeer.com:20002/dist/img/more_students_bg.jpg";
+
+
+// 注册
+@ym-img-register: "@{buildhost}/dist/img/register_01.jpg";
+
+// 关于我们及游学回顾图片
+
+@ym-img-about-qualification: "@{buildhost}/dist/img/about/1.png";
+@ym-img-about-contact: "@{buildhost}/dist/img/about/2.png";
